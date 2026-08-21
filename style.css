@@ -8,376 +8,484 @@ html {
 
 body {
   margin: 0;
-  background: #f4f2ed;
+  background: #fff;
   color: #111;
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
   line-height: 1.45;
 }
 
 
-/* HEADER */
+/* ====================
+   HEADER
+==================== */
 
 header {
   position: sticky;
   top: 0;
-
   z-index: 10;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 18px 28px;
+  padding: 14px 20px;
 
+  background: #fff;
   border-bottom: 1px solid #111;
-
-  background: #f4f2ed;
 }
-
 
 .logo {
   color: #111;
   text-decoration: none;
 
   font-weight: bold;
-  letter-spacing: .08em;
+  letter-spacing: 0.05em;
 }
-
 
 nav {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
-
 
 nav a {
   color: #111;
   text-decoration: none;
+}
 
-  font-size: 14px;
+nav a:hover {
+  text-decoration: underline;
 }
 
 
-/* HERO */
+/* ====================
+   GENERAL
+==================== */
 
-.hero {
-  padding: 120px 7vw;
-
+section {
   border-bottom: 1px solid #111;
 }
 
-
-.label {
-  font-size: 12px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+.section {
+  padding: 70px 20px;
 }
 
+.label,
+.section-number {
+  margin: 0 0 12px;
+
+  font-size: 11px;
+  line-height: 1;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* ====================
+   HERO
+==================== */
+
+.hero {
+  min-height: 80vh;
+
+  padding:
+    100px
+    20px
+    80px;
+}
 
 .hero h1 {
   max-width: 1000px;
 
-  margin: 40px 0;
+  margin: 30px 0;
 
-  font-size: clamp(50px, 8vw, 120px);
+  font-size: clamp(52px, 9vw, 130px);
 
-  line-height: .9;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
 }
-
 
 .intro {
-  max-width: 650px;
+  max-width: 550px;
 
-  font-size: 22px;
+  margin-top: 50px;
+
+  font-size: 20px;
 }
 
 
-/* CURRENT */
+/* ====================
+   CURRENT
+==================== */
 
 .current {
   display: flex;
-
   justify-content: space-between;
   align-items: end;
 
-  gap: 30px;
-
-  padding: 45px 7vw;
-
-  border-bottom: 1px solid #111;
+  padding: 25px 20px;
 }
-
 
 .current h2 {
-  margin: 10px 0 0;
+  margin: 0;
 
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: 36px;
+  font-weight: 400;
 }
-
 
 .status {
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
 
-/* SECTIONS */
-
-.section {
-  padding: 90px 7vw;
-
-  border-bottom: 1px solid #111;
-}
-
-
-.section-number {
-  margin: 0 0 15px;
-
-  font-size: 12px;
-}
-
+/* ====================
+   SECTION TITLE
+==================== */
 
 .section h2 {
   margin: 0 0 50px;
 
-  font-size: 48px;
+  font-size: 42px;
+  font-weight: 400;
+
+  letter-spacing: -0.02em;
 }
 
 
-/* TIMELINE */
+/* ====================
+   JOURNEY
+==================== */
 
 .timeline {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
   border-top: 1px solid #111;
 }
 
-
 .timeline article {
-  min-height: 220px;
-
-  padding: 25px;
-
-  border-right: 1px solid #111;
-}
-
-
-.timeline article:first-child {
-  border-left: 1px solid #111;
-}
-
-
-.timeline h3 {
-  margin-top: 50px;
-
-  font-size: 30px;
-}
-
-
-.timeline button {
-  padding: 8px 12px;
-
-  background: transparent;
-
-  border: 1px solid #111;
-}
-
-
-/* BOOKS */
-
-.books {
   display: grid;
 
   grid-template-columns:
-    repeat(4, 1fr);
+    50px
+    180px
+    1fr
+    auto;
 
-  gap: 1px;
+  gap: 20px;
 
-  background: #111;
+  align-items: baseline;
 
+  padding: 18px 0;
+
+  border-bottom: 1px solid #111;
+}
+
+.timeline article:last-child {
+  border-bottom: none;
+}
+
+.timeline h3 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.timeline p {
+  margin: 0;
+}
+
+.timeline button {
+  padding: 5px 8px;
+
+  background: none;
   border: 1px solid #111;
-}
 
-
-.book {
-  min-height: 320px;
-
-  padding: 20px;
-
-  background: #f4f2ed;
-}
-
-
-.book-image {
-  height: 190px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 20px;
-
-  background: #ddd;
-
+  font: inherit;
   font-size: 12px;
 }
 
 
+/* ====================
+   BOOKS
+==================== */
+
+.books {
+  border-top: 1px solid #111;
+}
+
+.book {
+  display: grid;
+
+  grid-template-columns:
+    50px
+    1fr
+    180px
+    180px;
+
+  gap: 20px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid #111;
+}
+
+.book-image {
+  display: none;
+}
+
+.book p,
+.book h3,
+.book span {
+  margin: 0;
+}
+
 .book h3 {
-  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.book p,
+.book span {
+  font-size: 13px;
 }
 
 
-/* PROCESS */
+/* ====================
+   CONVERSATION
+==================== */
 
 .process {
   display: flex;
-
   align-items: center;
 
   gap: 15px;
 
   flex-wrap: wrap;
+
+  margin-bottom: 50px;
 }
 
-
 .process div {
-  padding: 15px;
+  padding: 10px 12px;
 
   border: 1px solid #111;
 
-  font-size: 13px;
-
-  font-weight: bold;
+  font-size: 12px;
 }
 
+.process span {
+  font-size: 18px;
+}
 
 .description {
-  max-width: 650px;
+  max-width: 600px;
 
-  margin-top: 40px;
+  margin: 0;
 
   font-size: 18px;
 }
 
 
-/* COMMUNITY */
+/* ====================
+   COMMUNITY
+==================== */
 
 .community-intro {
-  max-width: 800px;
+  max-width: 700px;
 
-  font-size: 30px;
+  margin-bottom: 50px;
+
+  font-size: 28px;
 }
 
-
 .posts {
+  border-top: 1px solid #111;
+}
+
+.posts article {
   display: grid;
 
   grid-template-columns:
-    repeat(3, 1fr);
+    160px
+    1fr
+    120px;
 
-  gap: 1px;
+  gap: 20px;
 
-  background: #111;
+  padding: 20px 0;
 
-  border: 1px solid #111;
+  border-bottom: 1px solid #111;
 }
-
-
-.posts article {
-  min-height: 250px;
-
-  padding: 25px;
-
-  background: #f4f2ed;
-}
-
 
 .posts small {
-  font-size: 10px;
-
-  letter-spacing: .1em;
+  font-size: 11px;
 }
-
 
 .posts h3 {
-  font-size: 21px;
+  max-width: 700px;
 
-  font-weight: normal;
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 400;
 }
 
+.posts p {
+  margin: 0;
+
+  font-size: 12px;
+}
 
 .outline {
   margin-top: 25px;
 
-  padding: 12px 18px;
+  padding: 8px 12px;
 
-  background: transparent;
+  background: #fff;
 
   border: 1px solid #111;
+
+  font: inherit;
+}
+
+.outline:hover {
+  background: #111;
+  color: #fff;
 }
 
 
-/* ABOUT */
+/* ====================
+   ABOUT
+==================== */
 
 .about > p:last-child {
-  max-width: 850px;
+  max-width: 750px;
+
+  margin: 0;
 
   font-size: 24px;
 }
 
 
-/* FOOTER */
+/* ====================
+   FOOTER
+==================== */
 
 footer {
   display: flex;
-
   justify-content: space-between;
 
-  padding: 25px 7vw;
+  padding: 20px;
 
-  font-size: 12px;
+  font-size: 11px;
 }
 
 
-/* MOBILE */
+/* ====================
+   MOBILE
+==================== */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
+
+  header {
+    padding: 12px 15px;
+  }
 
   nav {
     display: none;
   }
 
   .hero {
-    padding-top: 70px;
+    min-height: 70vh;
+
+    padding:
+      80px
+      15px
+      60px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .intro {
+    font-size: 18px;
   }
 
   .current {
     display: block;
+
+    padding: 20px 15px;
   }
 
   .status {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
-  .timeline,
-  .books,
-  .posts {
-    grid-template-columns: 1fr;
+  .section {
+    padding: 60px 15px;
+  }
+
+  .section h2 {
+    font-size: 36px;
   }
 
   .timeline article {
-    border-left: 1px solid #111;
+    grid-template-columns:
+      35px
+      1fr;
+
+    gap: 10px;
+  }
+
+  .timeline article p {
+    grid-column: 2;
+  }
+
+  .timeline article button {
+    grid-column: 2;
+
+    width: fit-content;
+  }
+
+  .book {
+    grid-template-columns:
+      35px
+      1fr;
+  }
+
+  .book span {
+    grid-column: 2;
+  }
+
+  .posts article {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .community-intro {
+    font-size: 23px;
   }
 
   .process {
-    display: grid;
+    display: block;
+  }
 
-    grid-template-columns: 1fr 1fr;
+  .process div {
+    display: inline-block;
+
+    margin: 0 5px 8px 0;
+  }
+
+  .process span {
+    display: none;
   }
 
   .about > p:last-child {
@@ -391,7 +499,6 @@ footer {
   footer span {
     display: block;
 
-    margin: 5px 0;
+    margin-bottom: 5px;
   }
-
 }
