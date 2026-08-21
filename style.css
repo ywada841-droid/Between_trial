@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f4f2ed;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.45;
+}
+
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 28px;
+
+  border-bottom: 1px solid #111;
+
+  background: #f4f2ed;
+}
+
+
+.logo {
+  color: #111;
+  text-decoration: none;
+
+  font-weight: bold;
+  letter-spacing: .08em;
+}
+
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+
+nav a {
+  color: #111;
+  text-decoration: none;
+
+  font-size: 14px;
+}
+
+
+/* HERO */
+
+.hero {
+  padding: 120px 7vw;
+
+  border-bottom: 1px solid #111;
+}
+
+
+.label {
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+
+.hero h1 {
+  max-width: 1000px;
+
+  margin: 40px 0;
+
+  font-size: clamp(50px, 8vw, 120px);
+
+  line-height: .9;
+}
+
+
+.intro {
+  max-width: 650px;
+
+  font-size: 22px;
+}
+
+
+/* CURRENT */
+
+.current {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: end;
+
+  gap: 30px;
+
+  padding: 45px 7vw;
+
+  border-bottom: 1px solid #111;
+}
+
+
+.current h2 {
+  margin: 10px 0 0;
+
+  font-size: clamp(40px, 6vw, 80px);
+}
+
+
+.status {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+/* SECTIONS */
+
+.section {
+  padding: 90px 7vw;
+
+  border-bottom: 1px solid #111;
+}
+
+
+.section-number {
+  margin: 0 0 15px;
+
+  font-size: 12px;
+}
+
+
+.section h2 {
+  margin: 0 0 50px;
+
+  font-size: 48px;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top: 1px solid #111;
+}
+
+
+.timeline article {
+  min-height: 220px;
+
+  padding: 25px;
+
+  border-right: 1px solid #111;
+}
+
+
+.timeline article:first-child {
+  border-left: 1px solid #111;
+}
+
+
+.timeline h3 {
+  margin-top: 50px;
+
+  font-size: 30px;
+}
+
+
+.timeline button {
+  padding: 8px 12px;
+
+  background: transparent;
+
+  border: 1px solid #111;
+}
+
+
+/* BOOKS */
+
+.books {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1px;
+
+  background: #111;
+
+  border: 1px solid #111;
+}
+
+
+.book {
+  min-height: 320px;
+
+  padding: 20px;
+
+  background: #f4f2ed;
+}
+
+
+.book-image {
+  height: 190px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: #ddd;
+
+  font-size: 12px;
+}
+
+
+.book h3 {
+  margin: 5px 0;
+}
+
+
+/* PROCESS */
+
+.process {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+
+.process div {
+  padding: 15px;
+
+  border: 1px solid #111;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+
+.description {
+  max-width: 650px;
+
+  margin-top: 40px;
+
+  font-size: 18px;
+}
+
+
+/* COMMUNITY */
+
+.community-intro {
+  max-width: 800px;
+
+  font-size: 30px;
+}
+
+
+.posts {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: #111;
+
+  border: 1px solid #111;
+}
+
+
+.posts article {
+  min-height: 250px;
+
+  padding: 25px;
+
+  background: #f4f2ed;
+}
+
+
+.posts small {
+  font-size: 10px;
+
+  letter-spacing: .1em;
+}
+
+
+.posts h3 {
+  font-size: 21px;
+
+  font-weight: normal;
+}
+
+
+.outline {
+  margin-top: 25px;
+
+  padding: 12px 18px;
+
+  background: transparent;
+
+  border: 1px solid #111;
+}
+
+
+/* ABOUT */
+
+.about > p:last-child {
+  max-width: 850px;
+
+  font-size: 24px;
+}
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 25px 7vw;
+
+  font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .current {
+    display: block;
+  }
+
+  .status {
+    margin-top: 20px;
+  }
+
+  .timeline,
+  .books,
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline article {
+    border-left: 1px solid #111;
+  }
+
+  .process {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about > p:last-child {
+    font-size: 20px;
+  }
+
+  footer {
+    display: block;
+  }
+
+  footer span {
+    display: block;
+
+    margin: 5px 0;
+  }
+
+}
